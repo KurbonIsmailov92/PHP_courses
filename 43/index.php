@@ -4,6 +4,13 @@ session_start();
 
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/funks.php';
+
+if (isset($_POST['register'])) {
+    registration();
+    header("Location: index.php");
+    die;
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -149,4 +156,3 @@ require_once __DIR__ . '/funks.php';
 </body>
 </html>
 
---05:54 pause--
